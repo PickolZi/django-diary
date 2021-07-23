@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Inside the entries.html</h1>
+    <br />
+    <hr />
+
+    {% for entry in entries %}
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.text }}</p>
+        <hr>
+    {% endfor %}
+    
+{% endblock %}
