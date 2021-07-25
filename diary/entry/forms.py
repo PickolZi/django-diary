@@ -7,5 +7,5 @@ class EntryForm(forms.ModelForm):
 
     class Meta():
         model = models.Entry
-        fields = "__all__"
+        fields = ("title", "text")
     

@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from django.views.generic.base import TemplateView
+
+from django.urls import reverse_lazy
 
 from . import models
 from . import forms
@@ -19,3 +21,8 @@ class CreateEntryView(CreateView):
     template_name = 'entry/entry_form.html'
     # fields = "__all__"
 
+
+class DeleteEntryView(DeleteView):
+    model = models.Entry
+    
+    success_url = reverse_lazy("entry:entries")

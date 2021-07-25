@@ -8,4 +8,5 @@ app_name = "entry"
 urlpatterns = [
     path(r'', views.EntryView.as_view(), name="entries"),
     path(r'create/', views.CreateEntryView.as_view(), name="create"),
+    path(r'delete/<int:pk>', views.DeleteEntryView.as_view(), name="delete")
 ]

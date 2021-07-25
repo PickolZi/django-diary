@@ -10,6 +10,7 @@
         <h2>{{ entry.title }}</h2>
         <p>{{ entry.text }}</p>
         <p><b>&nbsp;{{ entry.date }}</b></p>
+        <a href="{% url 'entry:delete' pk=entry.pk %}">Delete entry</a>
         <hr>
     {% endfor %}
     
