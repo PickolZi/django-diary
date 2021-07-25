@@ -3,8 +3,8 @@ from django.contrib import admin
 from . import models
 
 class EntryAdmin(admin.ModelAdmin):
-    list_display = ["title", "text"]
-    list_filter = ["title"]
+    list_display = ["title", "text", "date"]
+    list_filter = ["title", "date"]
 
     search_fields = ["title"]
 
