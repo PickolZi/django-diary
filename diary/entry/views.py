@@ -24,5 +24,4 @@ class CreateEntryView(CreateView):
 
 class DeleteEntryView(DeleteView):
     model = models.Entry
-    
     success_url = reverse_lazy("entry:entries")

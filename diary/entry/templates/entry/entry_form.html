@@ -4,12 +4,15 @@
 {% block content %}
 
     <h1>Create your entries here!</h1>
-    <form method="POST">
+    <hr>
 
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="submit">
-
-    </form>
+    <div class="container entry_form ">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Post</button>
+            <!-- <input type="submit" value="submit"> -->
+        </form>
+    </div>
 
 {% endblock %}

@@ -1,16 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
     <title>Hello world!</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
 
 
 
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> --> <!-- Turns navbar dark -->
         <div class="container">
           <a class="navbar-brand" href="{% url 'index' %}">Home</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +33,24 @@
               <li class="nav-item">
                 <a class="nav-link active" href="{% url 'about_me' %}">About Me</a>
               </li>
+            </ul>
+
+            <!-- Socials -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" target="_blank" href="https://www.linkedin.com/in/james-san-494b481b2/"><img src="{% static 'images/linkedin.svg' %}"></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" target="_blank" href="https://github.com/PickolZi"><img src="{% static 'images/github.svg' %}"></a>
+              </li>
 
             </ul>
           </div>
         </div>
       </nav>
 
-    <div id="container">
+    <div id="main_content" class="container">
         {% block content %}
 
         {% endblock %}

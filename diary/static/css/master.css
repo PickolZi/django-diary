@@ -1,0 +1,18 @@
+nav ul li:hover {
+    text-decoration: underline;
+}
+#main_content {
+    margin-top: 25px;
+    /* background-color: rgb(141, 145, 146); */
+}
+h1 {
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+             /* Stolen from https://www.massmediums.com/blog/134-create-great-looking-pure-css-text-shadows.html */
+}
+
+.entry_form {
+    position: relative;
+    margin: auto;
+}
